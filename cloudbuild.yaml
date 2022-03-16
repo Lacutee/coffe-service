@@ -14,7 +14,6 @@ steps:
    'gcr.io/airy-advantage-336608/coffe-app:1.1',
    '.'
   ]
-  dir: 'coffe-app'
 # Step 3
 - name: 'gcr.io/cloud-builders/kubectl'
   args: ['apply', '-f', 'k8s/']
