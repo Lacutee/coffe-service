@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: coffe-app
+  name: coffe-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      run: coffe-app
+  template:
+    metadata:
+      labels:
+        run: coffe-app
+    spec:
+      containers:
+      - image: gcr.io/airy-advantage-336608/coffe-app:1.1
+        name: coffe-app
+        ports:
+        - containerPort: 8090
