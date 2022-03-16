@@ -24,5 +24,5 @@ func Connect(connectionString string) error {
 }
 
 func Migrate() {
-	Connector.Migrator().CreateTable(&models.Coffe{})
+	Connector.AutoMigrate(&models.Coffe{})
 }

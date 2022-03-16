@@ -11,7 +11,8 @@ import (
 )
 
 func main() {
-
+	initDB()
+	RouterStart()
 }
 
 func Services(router *mux.Router) {
@@ -46,5 +47,6 @@ func initDB() {
 	if err != nil {
 		panic(err.Error())
 	}
+	database.Migrate()
 
 }
