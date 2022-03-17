@@ -15,6 +15,7 @@ func main() {
 	RouterStart()
 }
 
+//
 func Services(router *mux.Router) {
 	staticDir := "/static/"
 	router.PathPrefix(staticDir).Handler(
