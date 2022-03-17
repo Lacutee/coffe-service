@@ -18,4 +18,4 @@ spec:
       - image: gcr.io/airy-advantage-336608/coffe-app:1.1
         name: coffe-app
         ports:
-        - containerPort: 8090
+        - containerPort: 3001
