@@ -36,7 +36,7 @@ func RouterStart() {
 func initDB() {
 	config :=
 		database.Config{
-			ServerName: "localhost:3306",
+			ServerName: "34.132.22.44:3306",
 			User:       "root",
 			Password:   "",
 			DB:         "coffe_db",
