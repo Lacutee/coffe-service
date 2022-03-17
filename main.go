@@ -33,6 +33,7 @@ func RouterStart() {
 	log.Fatal(http.ListenAndServe(":3001", router))
 }
 
+//
 func initDB() {
 	config :=
 		database.Config{
