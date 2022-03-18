@@ -19,7 +19,7 @@ steps:
   args: ['apply', '-f', 'k8s/']
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=coffe-cluster'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=gke-my-app-vue'
 # Step 4
 - name: 'gcr.io/cloud-builders/kubectl'
   args: [
@@ -31,7 +31,7 @@ steps:
   ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=coffe-cluster'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=gke-my-app-vue'
   # Push the image to Google Container Registry with the latest tag
 images: [
    'gcr.io/airy-advantage-336608/coffe-app:latest'
