@@ -29,9 +29,9 @@ func Services(router *mux.Router) {
 
 func RouterStart() {
 	router := mux.NewRouter().StrictSlash(true)
-	fmt.Println(`Running on port 3001`)
+	fmt.Println(`Running on port 3000`)
 	Services(router)
-	log.Fatal(http.ListenAndServe(":3001", router))
+	log.Fatal(http.ListenAndServe(":3000", router))
 }
 
 //
