@@ -15,7 +15,7 @@ spec:
         run: coffe-app
     spec:
       containers:
-      - image: gcr.io/airy-advantage-336608/coffe-app:1.1
+      - image: gcr.io/airy-advantage-336608/coffe-app:latest
         name: coffe-app
         ports:
         - containerPort: 3001

@@ -4,14 +4,14 @@ steps:
   entrypoint: 'bash'
   args: [
    '-c',
-   'docker pull gcr.io/airy-advantage-336608/coffe-app:1.1 || exit 0'
+   'docker pull gcr.io/airy-advantage-336608/coffe-app:latest || exit 0'
   ]
 # Step 2
 - name: gcr.io/cloud-builders/docker
   args: [
    'build',
    '-t',
-   'gcr.io/airy-advantage-336608/coffe-app:1.1',
+   'gcr.io/airy-advantage-336608/coffe-app:latest',
    '.'
   ]
 # Step 3
@@ -27,12 +27,12 @@ steps:
    'image',
    'deployment',
    'coffe-app',
-   'coffe-app=gcr.io/airy-advantage-336608/coffe-app:1.1'
+   'coffe-app=gcr.io/airy-advantage-336608/coffe-app:latest'
   ]
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=us-central1-c'
   - 'CLOUDSDK_CONTAINER_CLUSTER=coffe-cluster'
-  # Push the image to Google Container Registry with the 1.1 tag
+  # Push the image to Google Container Registry with the latest tag
 images: [
-   'gcr.io/airy-advantage-336608/coffe-app:1.1'
+   'gcr.io/airy-advantage-336608/coffe-app:latest'
   ]
